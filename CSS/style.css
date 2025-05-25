@@ -1,16 +1,15 @@
-
 /* ========= Font Definitions ========= */
 /* Cabin Sketch font classes */
 .cabin-sketch-regular {
-  font-family: "Cabin Sketch", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .cabin-sketch-bold {
-  font-family: "Cabin Sketch", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+    font-family: "Cabin Sketch", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 /* Hina Mincho font classes */
@@ -26,12 +25,18 @@
     font-weight: 400;
     font-style: normal;
 }
+
 :root {
-  --title-color: #231f16;  /* Dark brown for title */ 
-  --nav-color: #231f16;    /* Dark brown for navigation */
-  --nav-hover: #775984;    /* Purple for hover states */
-  --bg-light: #f8f9fa;     /* Light background */
-  --sidebar-bg: #e4e2f7;   /* Light purple sidebar */
+    --title-color: #231f16;
+    /* Dark brown for title */
+    --nav-color: #231f16;
+    /* Dark brown for navigation */
+    --nav-hover: #775984;
+    /* Purple for hover states */
+    --bg-light: #f8f9fa;
+    /* Light background */
+    --sidebar-bg: #e4e2f7;
+    /* Light purple sidebar */
 }
 
 /* =========  Base ========= */
@@ -51,31 +56,34 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-  }
+}
 
 body.lang-ja,
 [lang="ja"] {
-  font-family: "Hina Mincho", serif; 
-  line-height: 1.6;
+    font-family: "Hina Mincho", serif;
+    line-height: 1.6;
 }
 
 body.lang-zh,
 [lang="zh"] {
-  font-family: "ZCOOL XiaoWei", serif; 
-  letter-spacing: 0.05em;
+    font-family: "ZCOOL XiaoWei", serif;
+    letter-spacing: 0.05em;
 }
 
-h1, h2, h3, .site-title h1 {
+h1,
+h2,
+h3,
+.site-title h1 {
     color: var(--title-color);
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-  }
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
 [data-i18n] {
-    font-family: inherit; 
+    font-family: inherit;
 }
-  
-  /* ========= Sidebar Navigation (Left Nav) ========= */
-  .sidebar {
+
+/* ========= Sidebar Navigation (Left Nav) ========= */
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -84,35 +92,35 @@ h1, h2, h3, .site-title h1 {
     background-color: var(--sidebar-bg);
     padding: 1rem;
     z-index: 100;
-  }
-  
-  .sidebar .site-title {
+}
+
+.sidebar .site-title {
     text-align: center;
     margin-bottom: 2rem;
-  }
-  
-  .nav-menu ul {
+}
+
+.nav-menu ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .nav-menu li {
+}
+
+.nav-menu li {
     margin: 1rem 0;
-  }
-  
-  .nav-menu a {
+}
+
+.nav-menu a {
     color: var(--nav-color);
     text-decoration: none;
     transition: color 0.3s;
     display: block;
-  }
-  
-  .nav-menu a:hover {
-    color: var(--nav-hover);
-  }
+}
 
-  /* ========= Offcanvas (Mobile Nav) ========= */
-  .btn-open {
+.nav-menu a:hover {
+    color: var(--nav-hover);
+}
+
+/* ========= Offcanvas (Mobile Nav) ========= */
+.btn-open {
     display: none;
     position: fixed;
     top: 1rem;
@@ -120,84 +128,90 @@ h1, h2, h3, .site-title h1 {
     z-index: 120;
     background: none;
     border: none;
-  }
+}
 
 .offcanvas-header,
 .offcanvas-body {
-  background-color: var(--sidebar-bg);
+    background-color: var(--sidebar-bg);
 }
 
 /* Fix for offcanvas links */
 .offcanvas-body .nav-item .nav-link {
-  color: var(--nav-color) !important;
-  text-decoration: none !important;
-  padding: 0.5rem 1rem;
+    color: var(--nav-color) !important;
+    text-decoration: none !important;
+    padding: 0.5rem 1rem;
 }
 
 .offcanvas-body .nav-item .nav-link:hover {
-  color: var(--nav-hover) !important;
+    color: var(--nav-hover) !important;
 }
-  
-  /* ========= Main Content ========= */
-  .main-content {
+
+/* ========= Main Content ========= */
+.main-content {
     margin-left: 260px;
     padding: 2rem;
     max-width: calc(100vw - 260px);
     box-sizing: border-box;
-  }
-  
-  /* ========= Gallery ========= */
-  .gallery img {
+}
+
+/* ========= Gallery ========= */
+.gallery img {
     width: 100%;
     height: auto;
     max-width: 100%;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* some shadow */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* some shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     object-fit: cover;
-  }
+}
 
-  .gallery img:hover {
+.gallery img:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
     filter: brightness(1.05);
-  }  
-  
-  /* ========= Footer ========= */
-  .footer {
+}
+
+/* ========= Footer ========= */
+.footer {
     width: 100%;
     background-color: rgb(243, 235, 251);
     padding: 1.5rem 0;
     text-align: center;
     margin-top: auto;
-  }
-  
-  .footer-sns a {
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-sns a {
     color: var(--nav-color);
     text-decoration: none;
     margin: 0 1rem;
     transition: color 0.3s;
-  }
+}
 
-  .footer-sns a:hover {
+.footer-sns a:hover {
     color: var(--nav-hover);
-  }
+}
 
-  .footer-copy {
-  font-size: 0.85rem;      
-  color: var(--nav-color); 
-  }
+.footer-copy {
+    font-size: 0.85rem;
+    color: var(--nav-color);
+}
 
 
 
-  /* =====  Language Switcher ===== */
-  .lang-switcher {
+/* =====  Language Switcher ===== */
+.lang-switcher {
     margin-top: 1rem;
     display: flex;
     justify-content: center;
-  }
-  
-  .lang-switcher button {
+}
+
+.lang-switcher button {
     margin: 0.25rem;
     padding: 6px 12px;
     font-size: 0.85rem;
@@ -206,25 +220,24 @@ h1, h2, h3, .site-title h1 {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  .lang-switcher button:hover {
-    background-color: #c7c7c7;
-  }
+}
 
-  /* ========= Responsive ========= */
-  @media screen and (max-width: 850px) {
+.lang-switcher button:hover {
+    background-color: #c7c7c7;
+}
+
+/* ========= Responsive ========= */
+@media screen and (max-width: 850px) {
     .main-content {
-      margin-left: 0;
-      padding: 1rem;
+        margin-left: 0;
+        padding: 1rem;
     }
-  
+
     .btn-open {
-      display: inline;
+        display: inline;
     }
-  
+
     .sidebar {
-      display: none;
+        display: none;
     }
-  }
-  
+}
