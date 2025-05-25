@@ -1,0 +1,217 @@
+
+/* ========= Font Definitions ========= */
+/* Cabin Sketch font classes */
+.cabin-sketch-regular {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cabin-sketch-bold {
+  font-family: "Cabin Sketch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Hina Mincho font classes */
+.hina-mincho-regular {
+    font-family: "Hina Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ZCOOL XiaoWei font classes */
+.zcool-xiaowei-regular {
+    font-family: "ZCOOL XiaoWei", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+:root {
+  --title-color: #231f16;  
+}
+
+/* =========  Base ========= */
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: "Cabin Sketch", cursive;
+    font-weight: 400;
+    background-color: #f8f9fa;
+    background-image: url(../image/Primitive_Lifebg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+body.lang-ja,
+[lang="ja"] {
+  font-family: "Hina Mincho", serif; 
+  line-height: 1.6;
+}
+
+body.lang-zh,
+[lang="zh"] {
+  font-family: "ZCOOL XiaoWei", serif; 
+  letter-spacing: 0.05em;
+}
+
+h1, h2, h3, .site-title h1 {
+    color: var(--title-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  }
+
+[data-i18n] {
+    font-family: inherit; 
+}
+  
+  /* ========= Sidebar (Left Nav) ========= */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: rgb(228, 226, 247);
+    padding: 1rem;
+    z-index: 100;
+  }
+  
+  .sidebar .site-title {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .nav-menu li {
+    margin: 1rem 0;
+  }
+  
+  .nav-menu a {
+    color: #231f16;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    color: #775984;
+  }
+  .lang-switcher {
+    margin-top: 1rem;
+  }
+  
+  .lang-switcher button {
+    margin: 0.25rem;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border: none;
+    background-color: #dcd4f3;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .lang-switcher button:hover {
+    background-color: #c7c7c7;
+  }
+  
+  /* ========= Offcanvas (Mobile Nav) ========= */
+  .btn-open {
+    display: none;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 120;
+    background: none;
+    border: none;
+  }
+  
+  .offcanvas-header,
+  .offcanvas-body {
+    background-color: rgb(228, 226, 247);
+  }
+
+  .offcanvas-body .nav-link a {
+    color: #231f16 !important; 
+    text-decoration: none !important; 
+  }
+
+  .offcanvas-body .nav-link a:hover {
+    color: #554b36 !important; 
+    text-decoration: none !important; 
+  }
+  
+  /* ========= Main Content ========= */
+  .main-content {
+    margin-left: 260px;
+    padding: 2rem;
+    max-width: calc(100vw - 260px);
+    box-sizing: border-box;
+  }
+  
+  /* ========= Gallery ========= */
+  .gallery img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* some shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+  }
+
+  .gallery img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05);
+  }  
+  
+  /* ========= Footer ========= */
+  .footer {
+    width: 100%;
+    background-color: rgb(243, 235, 251);
+    padding: 1.5rem 0;
+    text-align: center;
+    margin-top: auto;
+  }
+  
+  .footer-sns a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+  
+  .footer-copy {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  .lang-switcher {
+    margin-top: 1rem;
+  } 
+  
+  /* ========= Responsive ========= */
+  @media screen and (max-width: 850px) {
+    .main-content {
+      margin-left: 0;
+      padding: 1rem;
+    }
+  
+    .btn-open {
+      display: inline;
+    }
+  
+    .sidebar {
+      display: none;
+    }
+  }
+  
