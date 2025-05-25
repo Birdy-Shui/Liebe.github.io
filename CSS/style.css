@@ -27,7 +27,11 @@
     font-style: normal;
 }
 :root {
-  --title-color: #231f16;  
+  --title-color: #231f16;  /* Dark brown for title */ 
+  --nav-color: #231f16;    /* Dark brown for navigation */
+  --nav-hover: #775984;    /* Purple for hover states */
+  --bg-light: #f8f9fa;     /* Light background */
+  --sidebar-bg: #e4e2f7;   /* Light purple sidebar */
 }
 
 /* =========  Base ========= */
@@ -41,7 +45,7 @@ body {
     min-height: 100vh;
     font-family: "Cabin Sketch", cursive;
     font-weight: 400;
-    background-color: #f8f9fa;
+    background-color: var(--bg-light);
     background-image: url(../image/Primitive_Lifebg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -70,14 +74,14 @@ h1, h2, h3, .site-title h1 {
     font-family: inherit; 
 }
   
-  /* ========= Sidebar (Left Nav) ========= */
+  /* ========= Sidebar Navigation (Left Nav) ========= */
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
     width: 260px;
     height: 100vh;
-    background-color: rgb(228, 226, 247);
+    background-color: var(--sidebar-bg);
     padding: 1rem;
     z-index: 100;
   }
@@ -97,32 +101,16 @@ h1, h2, h3, .site-title h1 {
   }
   
   .nav-menu a {
-    color: #231f16;
+    color: var(--nav-color);
     text-decoration: none;
     transition: color 0.3s;
+    display: block;
   }
   
   .nav-menu a:hover {
-    color: #775984;
+    color: var(--nav-hover);
   }
-  .lang-switcher {
-    margin-top: 1rem;
-  }
-  
-  .lang-switcher button {
-    margin: 0.25rem;
-    padding: 6px 12px;
-    font-size: 0.85rem;
-    border: none;
-    background-color: #dcd4f3;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .lang-switcher button:hover {
-    background-color: #c7c7c7;
-  }
-  
+
   /* ========= Offcanvas (Mobile Nav) ========= */
   .btn-open {
     display: none;
@@ -133,21 +121,22 @@ h1, h2, h3, .site-title h1 {
     background: none;
     border: none;
   }
-  
-  .offcanvas-header,
-  .offcanvas-body {
-    background-color: rgb(228, 226, 247);
-  }
 
-  .offcanvas-body .nav-link a {
-    color: #231f16 !important; 
-    text-decoration: none !important; 
-  }
+.offcanvas-header,
+.offcanvas-body {
+  background-color: var(--sidebar-bg);
+}
 
-  .offcanvas-body .nav-link a:hover {
-    color: #554b36 !important; 
-    text-decoration: none !important; 
-  }
+/* Fix for offcanvas links */
+.offcanvas-body .nav-item .nav-link {
+  color: var(--nav-color) !important;
+  text-decoration: none !important;
+  padding: 0.5rem 1rem;
+}
+
+.offcanvas-body .nav-item .nav-link:hover {
+  color: var(--nav-hover) !important;
+}
   
   /* ========= Main Content ========= */
   .main-content {
@@ -184,21 +173,45 @@ h1, h2, h3, .site-title h1 {
   }
   
   .footer-sns a {
-    color: #000;
+    color: var(--nav-color);
     text-decoration: none;
     margin: 0 1rem;
-  }
-  
-  .footer-copy {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    color: #555;
+    transition: color 0.3s;
   }
 
+  .footer-sns a:hover {
+    color: var(--nav-hover);
+  }
+
+  .footer-copy {
+  font-size: 0.85rem;      
+  color: var(--nav-color); 
+  }
+
+
+
+  /* =====  Language Switcher ===== */
   .lang-switcher {
     margin-top: 1rem;
-  } 
+    display: flex;
+    justify-content: center;
+  }
   
+  .lang-switcher button {
+    margin: 0.25rem;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border: none;
+    background-color: #dcd4f3;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .lang-switcher button:hover {
+    background-color: #c7c7c7;
+  }
+
   /* ========= Responsive ========= */
   @media screen and (max-width: 850px) {
     .main-content {
