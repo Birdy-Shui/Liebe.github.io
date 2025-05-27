@@ -70,28 +70,8 @@ body {
     position: relative;
 }  
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: inherit;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
-
+body::before,
 body::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
     z-index: -1;
 }
 
@@ -169,7 +149,7 @@ h1,h2,h3,.site-title h1 {
     background-color: var(--sidebar-bg);
 }
 
-/* Fix for offcanvas links */
+/* offcanvas links */
 .offcanvas-body .nav-item .nav-link {
     color: var(--nav-color) !important;
     text-decoration: none !important;
@@ -183,7 +163,7 @@ h1,h2,h3,.site-title h1 {
 /* ========= Main Content ========= */
 
 .main-content {
-    flex: 1;
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     min-height: auto;
@@ -193,12 +173,27 @@ h1,h2,h3,.site-title h1 {
     max-width: calc(100vw - 260px);
     box-sizing: border-box;
     overflow-y: visible;
+    box-sizing: border-box;
 }
 
 /* ========= Gallery ========= */
 .gallery {
     width: 100%;
     padding: 0 15px;
+    box-sizing: border-box;
+}
+
+
+.gallery.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+}
+
+.gallery.col-sm-6 {
+    padding: 4px;
+    flex: 0 0 calc(50% - 8px);
+    max-width: calc(50% - 8px);
     box-sizing: border-box;
 }
 
@@ -222,7 +217,7 @@ h1,h2,h3,.site-title h1 {
 /* ========= Footer ========= */
 .footer {
     width: 100%;
-    height: auto;
+    height: 100px;
     background-color: rgb(243, 235, 251);
     background-attachment: fixed;
     padding: 1.5rem 0;
@@ -232,8 +227,6 @@ h1,h2,h3,.site-title h1 {
     margin-bottom: 0;
     margin-left: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 .footer-sns a {
@@ -280,11 +273,21 @@ h1,h2,h3,.site-title h1 {
 
 /* ========= Responsive ========= */
 @media screen and (max-width: 850px) {
+    .body {
+        background-attachment: fixed!important;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
+        background-position: center center!important;
+        overflow-x: hidden!important;
+        overflow-y: auto!important;
+        position: relative;
+    }
     .main-content {
         margin-left: 0;
         padding: 1rem;
         max-width: 100%;
         min-height: 100vh;
+        padding-bottom: 100px;
     }
 
     .lang-switcher button {
@@ -305,15 +308,27 @@ h1,h2,h3,.site-title h1 {
         display: none;
         
     }
-    
+
+    .footer {
+        position: static!important;
+        bottom: auto!important;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .main-content {
         margin-left: 0;
-        padding: 1rem;
         max-width: 100%;
         min-height: 100vh;
+    }
+
+    .body {
+        background-image: url(../image/Primitive_Lifebg.jpg)!important;
+        background-attachment: fixed!important;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
+        background-position: center center!important;
     }
 
     .lang-switcher button {
@@ -338,15 +353,31 @@ h1,h2,h3,.site-title h1 {
     }
 
     .footer {
-        padding-top: 1rem;
-        margin-top: auto;
         position: relative;
-        margin-bottom: 0;
-        margin-left: 0;
-    }   
+        bottom: 0;
+    }
 }
 
+@media (max-width: 576px) {
+    .gallery .col-sm-6 {
+      padding: 3px; 
+    }
+    .gallery img {
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1); 
+    }
+  }
+
 @media screen and (max-width: 480px) {
+    .body {
+        background-attachment: fixed!important;
+        background-repeat: no-repeat!important;
+        background-size: cover!important;
+        background-position: center center!important;
+        overflow-x: hidden!important;
+        overflow-y: auto!important;
+        position: relative;
+    }
+
     .lang-switcher button {
         color: var(--nav-color);
         text-decoration: none;
@@ -363,22 +394,7 @@ h1,h2,h3,.site-title h1 {
     }
 
     .footer {
-        padding-top: 1rem;
-        margin-top: auto;
-        position: relative;
-        margin-bottom: 0;
-        margin-left: 0;
+        position: relative; 
+        bottom: 0;
     }
 }
-
-
-/* === Wrapper layout to fix footer floating issue === */
-/* .wrapper {
-    max-width: 100%;
-    margin: 0 auto;
-    margin-right: 0;
-  }
-
-.main-content {
-    flex: 1;
-} */
