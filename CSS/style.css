@@ -227,6 +227,8 @@ h1,h2,h3,.site-title h1 {
     background-attachment: fixed;
     padding: 1.5rem 0;
     text-align: center;
+    margin-top: auto;
+    position: relative;
     margin-bottom: 0;
     margin-left: 0;
     bottom: 0;
@@ -303,6 +305,7 @@ h1,h2,h3,.site-title h1 {
         display: none;
         
     }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -333,6 +336,14 @@ h1,h2,h3,.site-title h1 {
         flex: 0 0 calc(50% - 8px);
         max-width: calc(50% - 8px);
     }
+
+    .footer {
+        padding-top: 1rem;
+        margin-top: auto;
+        position: relative;
+        margin-bottom: 0;
+        margin-left: 0;
+    }   
 }
 
 @media screen and (max-width: 480px) {
@@ -350,7 +361,14 @@ h1,h2,h3,.site-title h1 {
         max-width: calc(50% - 6px);
         padding: 3px;
     }
-}
+
+    .footer {
+        padding-top: 1rem;
+        margin-top: auto;
+        position: relative;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
 }
 
 
