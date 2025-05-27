@@ -1,185 +1,201 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LIEBE'S FUNE</title>
-  <meta name="description" content="水兵リーベ、僕の舟。" />
-  
-  <!-- Bootstrap + CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="./CSS/style.css" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Hina+Mincho&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
-  
-  <!-- Fancybox 5 CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIEBE'S FUNE</title>
+    <meta name="description" content="水兵リーベ、僕の舟。" />
+
+    <!-- Bootstrap + CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Hina+Mincho&family=ZCOOL+XiaoWei&display=swap"
+        rel="stylesheet">
+
+    <!-- Fancybox 5 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 </head>
 
 <body>
-  <!-- ===== Header / Sidebar ===== -->
-  <header class="site-header">
+    <!-- ===== Header / Sidebar ===== -->
+    <header class="site-header"></header>
     <!-- Mobile Menu Button -->
-    <button class="btn-open" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
-      <img src="./logo/offcanvas.png" alt="Menu" />
+    <button class="btn-open" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+        aria-controls="offcanvasNav">
+        <img src="./logo/offcanvas.png" alt="Menu" />
     </button>
 
     <!-- Offcanvas Menu -->
     <div class="offcanvas offcanvas-start" id="offcanvasNav" tabindex="-1" aria-labelledby="offcanvasLabel">
-      <div class="offcanvas-header">
-        <h2 id="offcanvasLabel">Liebe</h2>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-        <nav aria-label="モバイルナビ">
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="./Japanese_Painting.html" data-i18n="japanese_painting">Japanese Painting</a></li>
-            <li class="nav-item"><a class="nav-link" href="print.html" data-i18n="print">Print</a></li>
-            <li class="nav-item"><a class="nav-link" href="water_color.html" data-i18n="water_color">Watercolor</a></li>
-            <li class="nav-item"><a class="nav-link" href="oil_painting.html" data-i18n="oil_painting">Oil painting</a></li>
-            <li class="nav-item"><a class="nav-link" href="something_else.html" data-i18n="something_else">Something else</a></li>
-            <li class="nav-item"><a class="nav-link" href="About.html" data-i18n="about">About me</a></li>
-          </ul>
+        <div class="offcanvas-header" style="display:block;">
+            <h2 class="cabin-sketch-bold">Liebe</h2>
+            <h4 class="cabin-sketch-regular">Welcome to my boat.</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <nav aria-label="モバイルナビ">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="./Japanese_Painting.html"
+                            data-i18n="japanese_painting">Japanese Painting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="print.html" data-i18n="print">Print</a></li>
+                    <li class="nav-item"><a class="nav-link" href="water_color.html"
+                            data-i18n="water_color">Watercolor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="oil_painting.html" data-i18n="oil_painting">Oil
+                            painting</a></li>
+                    <li class="nav-item"><a class="nav-link" href="something_else.html"
+                            data-i18n="something_else">Something else</a></li>
+                    <li class="nav-item"><a class="nav-link" href="About.html" data-i18n="about">About</a></li>
+                </ul>
 
-          <!-- Language Switcher -->
-          <div class="lang-switcher text-center mt-4">
-            <button onclick="changeLang('ja')">日</button>
-            <button onclick="changeLang('en')">En</button>
-            <button onclick="changeLang('zh')">中</button>
-          </div>
-        </nav>
-      </div>
+                <!-- Language Switcher -->
+                <div class="lang-switcher text-center mt-4">
+                    <button onclick="changeLang('ja')">日</button>
+                    <button onclick="changeLang('en')">En</button>
+                    <button onclick="changeLang('zh')">中</button>
+                </div>
+            </nav>
+        </div>
     </div>
 
     <!-- Sidebar Navigation -->
     <aside class="sidebar fixed-left">
-      <div class="site-title text-center p-3">
-        <h1 class="cabin-sketch-bold">Liebe</h1> 
-        <h3 class="cabin-sketch-regular">Welcome to my boat.</h3>
-      </div>
-      <nav class="nav-menu" aria-label="Main navigation">
-        <ul class="nav flex-column text-center">
-          <li><a href="./Japanese_Painting.html" data-i18n="japanese_painting">Japanese Painting</a></li>
-          <li><a href="print.html" data-i18n="print">Print</a></li>
-          <li><a href="water_color.html" data-i18n="water_color">Watercolor</a></li>
-          <li><a href="oil_painting.html" data-i18n="oil_painting">Oil painting</a></li>
-          <li><a href="something_else.html" data-i18n="something_else">Something else</a></li>
-          <li><a href="About.html" data-i18n="about">About me</a></li>
-        </ul>
-
-        <!-- Language Switcher -->
-        <div class="lang-switcher text-center mt-4">
-          <button onclick="changeLang('ja')">日</button>
-          <button onclick="changeLang('en')">En</button>
-          <button onclick="changeLang('zh')">中</button>
+        <div class="site-title text-center p-3">
+            <h1 class="cabin-sketch-bold">Liebe</h1>
+            <h3 class="cabin-sketch-regular">Welcome to my boat.</h3>
         </div>
-      </nav>
+        <nav class="nav-menu" aria-label="Main navigation">
+            <ul class="nav flex-column text-center">
+                <li><a href="./Japanese_Painting.html" data-i18n="japanese_painting">Japanese Painting</a></li>
+                <li><a href="print.html" data-i18n="print">Print</a></li>
+                <li><a href="water_color.html" data-i18n="water_color">Watercolor</a></li>
+                <li><a href="oil_painting.html" data-i18n="oil_painting">Oil painting</a></li>
+                <li><a href="something_else.html" data-i18n="something_else">Something else</a></li>
+                <li><a href="About.html" data-i18n="about">About</a></li>
+            </ul>
+
+            <!-- Language Switcher -->
+            <div class="lang-switcher text-center mt-4">
+                <button onclick="changeLang('ja')">日</button>
+                <button onclick="changeLang('en')">En</button>
+                <button onclick="changeLang('zh')">中</button>
+            </div>
+        </nav>
     </aside>
-  </header>
+    </header>
 
-  <!-- ===== Main Content ===== -->
-  <main class="main-content container-fluid py-4" style="margin-left: 260px;">
-    <section class="gallery">
-      <div class="row g-4">
-        <!-- Japanese Painting -->
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/絡まる.jpg" data-fancybox="gallery" data-caption="絡まる">
-            <img src="./image/絡まる.jpg" alt="karamaru" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/生命は叫び.jpg" data-fancybox="gallery" data-caption="生命は叫び">
-            <img src="./image/生命は叫び.jpg" alt="seimei" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/鳴き.jpg" data-fancybox="gallery" data-caption="鳴き">
-            <img src="./image/鳴き.jpg" alt="naki" class="img-fluid">
-          </a>
-        </div>
+    <!-- ===== Main Content ===== -->
+    <main class="main-content container-fluid py-4">
+        <section class="gallery">
+            <div class="row g-4">
+                <!-- Japanese Painting -->
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/絡まる.jpg" data-fancybox="gallery" data-caption="絡まる">
+                        <img src="./image/絡まる.jpg" alt="karamaru" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/生命は叫び.jpg" data-fancybox="gallery" data-caption="生命は叫び">
+                        <img src="./image/生命は叫び.jpg" alt="seimei" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/鳴き.jpg" data-fancybox="gallery" data-caption="鳴き">
+                        <img src="./image/鳴き.jpg" alt="naki" class="img-fluid">
+                    </a>
+                </div>
 
-        <!-- Watercolor -->
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/寂寞的夜晚.jpg" data-fancybox="gallery" data-caption="寂寞的夜晚">
-            <img src="./image/寂寞的夜晚.jpg" alt="lonesome night" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/夜间飞行.jpg" data-fancybox="gallery" data-caption="夜间飞行">
-            <img src="./image/夜间飞行.jpg" alt="fly at night" class="img-fluid">
-          </a>
-        </div>
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/夜间飞行2.jpg" data-fancybox="gallery" data-caption="夜间飞行2">
-            <img src="./image/夜间飞行2.jpg" alt="fly in night 2" class="img-fluid">
-        </div>
+                <!-- Watercolor -->
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/寂寞的夜晚.jpg" data-fancybox="gallery" data-caption="寂寞的夜晚">
+                        <img src="./image/寂寞的夜晚.jpg" alt="lonesome night" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/夜间飞行.jpg" data-fancybox="gallery" data-caption="夜间飞行">
+                        <img src="./image/夜间飞行.jpg" alt="fly at night" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/夜间飞行2.jpg" data-fancybox="gallery" data-caption="夜间飞行2">
+                        <img src="./image/夜间飞行2.jpg" alt="fly in night 2" class="img-fluid">
+                    </a>
+                </div>
 
-        <!-- Japanese Painting again -->
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/湿り.jpg" data-fancybox="gallery" data-caption="湿り">
-            <img src="./image/湿り.jpg" alt="tree" class="img-fluid">
-          </a>
+                <!-- Japanese Painting again -->
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/湿り.jpg" data-fancybox="gallery" data-caption="湿り">
+                        <img src="./image/湿り.jpg" alt="tree" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/蹌踉.jpg" data-fancybox="gallery" data-caption="蹌踉">
+                        <img src="./image/蹌踉.jpg" alt="yume" class="img-fluid">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <a href="./image/ゆらゆら.jpg" data-fancybox="gallery" data-caption="ゆらゆら">
+                        <img src="./image/ゆらゆら.jpg" alt="primitive" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer container-fluid text-center py-4 mt-4">
+        <div class="footer-sns row justify-content-center">
+            <div class="col-auto"><a href="https://www.instagram.com/..." target="_blank"><img
+                        src="./logo/Instagram.png" alt="Instagram" class="img-fluid" style="width:25px;">
+                    Instagram</a></div>
+            <div class="col-auto"><a href="https://www.xiaohongshu.com/..." target="_blank"><img
+                        src="./logo/Redbook.png" alt="RedNote" class="img-fluid" style="width:25px;"> RedNote</a>
+            </div>
+            <div class="col-auto"><a href="mailto:duanshui318@gmail.com"><img src="./logo/Email.png" alt="E-mail"
+                        class="img-fluid" style="width:25px;"> E-mail</a></div>
         </div>
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/蹌踉.jpg" data-fancybox="gallery" data-caption="蹌踉">
-            <img src="./image/蹌踉.jpg" alt="yume" class="img-fluid">
-          </a>
+        <div class="footer-copy pt-3">
+            <small>Copyright © 2025 LIEBE, All Rights Reserved.</small>
         </div>
-        <div class="col-sm-6 col-lg-4">
-          <a href="./image/ゆらゆら.jpg" data-fancybox="gallery" data-caption="ゆらゆら">
-            <img src="./image/ゆらゆら.jpg" alt="primitive" class="img-fluid">
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
+    </footer>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer container-fluid text-center py-4 mt-4">
-    <div class="footer-sns row justify-content-center">
-      <div class="col-auto"><a href="https://www.instagram.com/..." target="_blank"><img src="./logo/Instagram.png" alt="Instagram" class="img-fluid" style="width:25px;"> Instagram</a></div>
-      <div class="col-auto"><a href="https://www.xiaohongshu.com/..." target="_blank"><img src="./logo/Redbook.png" alt="RedNote" class="img-fluid" style="width:25px;"> RedNote</a></div>
-      <div class="col-auto"><a href="mailto:duanshui318@gmail.com"><img src="./logo/Email.png" alt="E-mail" class="img-fluid" style="width:25px;"> E-mail</a></div>
-    </div>
-    <div class="footer-copy pt-3">
-      <small>Copyright © 2025 LIEBE, All Rights Reserved.</small>
-    </div>
-  </footer>
+    <!-- i18next CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/25.2.0/i18next.min.js"></script>
+    <!-- translation -->
+    <script src="./JS/i18n.js"></script>
 
-  <!-- i18next CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/25.2.0/i18next.min.js"></script>
-  <!-- translation -->
-  <script src="./JS/i18n.js"></script>
-  
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Fancybox JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
-  <script>
+    <script>
 
-  Fancybox.bind("[data-fancybox]", {
-    Toolbar: {
-      display: {
-        left: ["infobar"],
-        middle: [
-          "zoomIn",
-          "zoomOut",
-          "toggle1to1",
-          "rotateCCW",
-          "rotateCW",
-          "flipX",
-          "flipY",
-        ],  
-        right: ["slideshow", "thumbs", "close"],
-       },
-      },
-    });
-  </script>
+        Fancybox.bind("[data-fancybox]", {
+            Toolbar: {
+                display: {
+                    left: ["infobar"],
+                    middle: [
+                        "zoomIn",
+                        "zoomOut",
+                        "toggle1to1",
+                        "rotateCCW",
+                        "rotateCW",
+                        "flipX",
+                        "flipY",
+                    ],
+                    right: ["slideshow", "thumbs", "close"],
+                },
+            },
+        });
+    </script>
 
 </body>
+
 </html>
