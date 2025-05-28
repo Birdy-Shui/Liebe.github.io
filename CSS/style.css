@@ -253,6 +253,7 @@ h1,h2,h3,.site-title h1 {
     max-width: 100%;
     box-sizing: border-box;
     bottom: 0;
+    font-family: "Cabin Sketch", sans-serif !important;
 }
 
 .footer-sns a {
@@ -294,7 +295,7 @@ h1,h2,h3,.site-title h1 {
 }
 
 .lang-switcher button:hover {
-    background-color: #c7c7c7;
+    background-color: #c4b6c8;
 }
 
 /* ========= Responsive ========= */
@@ -345,6 +346,7 @@ h1,h2,h3,.site-title h1 {
         background-position: center center!important;
         overflow-x: hidden!important;
         overflow-y: auto!important;
+        font-family: "Cabin Sketch", sans-serif !important;
     }
     .main-content {
         margin-left: 0;
