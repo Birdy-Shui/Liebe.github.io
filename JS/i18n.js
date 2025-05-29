@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "water_color": "Watercolor",
                     "oil_painting": "Oil Painting",
                     "something_else": "Something Else",
-                    "about": "About Me"
+                    "about": "About"
                 }
             },
             ja: {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "water_color": "水彩画",
                     "oil_painting": "油絵",
                     "something_else": "その他",
-                    "about": "私について"
+                    "about": "About"
                 }
             },
             zh: {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     "water_color": "水彩",
                     "oil_painting": "油画",
                     "something_else": "其他",
-                    "about": "关于我"
+                    "about": "About"
                 }
             }
         }
