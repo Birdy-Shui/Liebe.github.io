@@ -84,7 +84,7 @@ body {
     flex-direction: column;
     font-family: "Cabin Sketch", cursive;
     font-weight: 400;
-    background-image: url(../image/Primitive_Lifebg.jpg)!important;
+    background-image: url(../image/Primitive_Lifebg.jpg);
     background-attachment: scroll!important;
     background-repeat: no-repeat!important;
     background-size: cover!important;
