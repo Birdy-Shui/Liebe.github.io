@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { src: "image/蹌踉.jpg", alt: "yume", caption: "蹌踉" },
         { src: "image/ゆらゆら.jpg", alt: "ゆらゆら", caption: "ゆらゆら" },
         { src: "image/夢を覆す.jpg", alt: "夢を覆す", caption: "夢を覆す" },
-        { src:"image/鼓浪之声.jpg", alt:"鼓浪之声",caption:"鼓浪之声"},
+        { src: "image/鼓浪之声.jpg", alt:"鼓浪之声",caption:"鼓浪之声"},
         { src: "image/あわ.jpg", alt: "あわ", caption: "あわ" }
       ],
       water_color: [
