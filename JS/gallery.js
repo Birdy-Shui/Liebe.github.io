@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const galleryData = {
       japanese_painting: [
         { src: "image/絡まる.jpg", alt: "karamaru", caption: "絡まる" },
-        { src: "image/生命.jpg", alt: "seimei", caption: "生命" },
+        { src: "image/生命は.jpg", alt: "seimei", caption: "生命は" },
         { src: "image/鳴き.jpg", alt: "naki", caption: "鳴き" },
         { src: "image/湿り.jpg", alt: "tree", caption: "湿り" },
         { src: "image/蹌踉.jpg", alt: "yume", caption: "蹌踉" },
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     const initialImages = [
         { src: "image/絡まる.jpg", alt: "karamaru", caption: "絡まる" },
-        { src: "image/生命.jpg", alt: "seimei", caption: "生命" },
+        { src: "image/生命は.jpg", alt: "seimei", caption: "生命は" },
         { src: "image/鳴き.jpg", alt: "naki", caption: "鳴き" },
         { src: "image/寂寞的夜晚.jpg", alt: "night", caption: "寂しい夜" },
         { src: "image/夜间飞行.jpg", alt: "fly", caption: "夜間飛行" },
