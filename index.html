@@ -41,14 +41,15 @@
         <div class="offcanvas-body">
             <nav aria-label="モバイルナビ">
                 <ul class="nav flex-column">
-                    <li class="nav-item"><a class="nav-link" href="./Japanese_Painting.html"
+                    <li class="nav-item"><a href="#" class="nav-link" data-name="Japanese_Painting"
                             data-i18n="japanese_painting">Japanese Painting</a></li>
-                    <li class="nav-item"><a class="nav-link" href="print.html" data-i18n="print">Print</a></li>
-                    <li class="nav-item"><a class="nav-link" href="water_color.html"
+                    <li class="nav-item"><a href="#" class="nav-link" data-name="print" data-i18n="print">Print</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" data-name="water_color"
                             data-i18n="water_color">Watercolor</a></li>
-                    <li class="nav-item"><a class="nav-link" href="oil_painting.html" data-i18n="oil_painting">Oil
+                    <li class="nav-item"><a href="#" class="nav-link" data-name="oil_painting"
+                            data-i18n="oil_painting">Oil
                             painting</a></li>
-                    <li class="nav-item"><a class="nav-link" href="something_else.html"
+                    <li class="nav-item"><a href="#" class="nav-link" data-name="something_else"
                             data-i18n="something_else">Something else</a></li>
                     <li class="nav-item"><a class="nav-link" href="About.html" data-i18n="about">About</a></li>
                 </ul>
@@ -71,11 +72,11 @@
         </div>
         <nav class="nav-menu" aria-label="Main navigation">
             <ul class="nav flex-column text-center">
-                <li><a href="./Japanese_Painting.html" data-i18n="japanese_painting">Japanese Painting</a></li>
-                <li><a href="print.html" data-i18n="print">Print</a></li>
-                <li><a href="water_color.html" data-i18n="water_color">Watercolor</a></li>
-                <li><a href="oil_painting.html" data-i18n="oil_painting">Oil painting</a></li>
-                <li><a href="something_else.html" data-i18n="something_else">Something else</a></li>
+                <li><a href="#" class="nav-link" data-name="Japanese_Painting" data-i18n="japanese_painting">Japanese Painting</a></li>
+                <li><a href="#" class="nav-link" data-name="print" data-i18n="print">Print</a></li>
+                <li><a href="#" class="nav-link" data-name="water_color" data-i18n="water_color">Watercolor</a></li>
+                <li><a href="#" class="nav-link" data-name="oil_painting" data-i18n="oil_painting">Oil painting</a></li>
+                <li><a href="#" class="nav-link" data-name="something_else" data-i18n="something_else">Something else</a></li>
                 <li><a href="About.html" data-i18n="about">About</a></li>
             </ul>
 
@@ -92,61 +93,11 @@
     <!-- ===== Main Content ===== -->
     <main class="main-content container-fluid py-4">
         <section class="gallery">
-            <div class="row g-4">
-                <!-- Japanese Painting -->
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/絡まる.jpg" data-fancybox="gallery" data-caption="絡まる">
-                        <img src="./image/絡まる.jpg" alt="karamaru" class="img-fluid">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/生命は叫び.jpg" data-fancybox="gallery" data-caption="生命は叫び">
-                        <img src="./image/生命は叫び.jpg" alt="seimei" class="img-fluid">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/鳴き.jpg" data-fancybox="gallery" data-caption="鳴き">
-                        <img src="./image/鳴き.jpg" alt="naki" class="img-fluid">
-                    </a>
-                </div>
-
-                <!-- Watercolor -->
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/寂寞的夜晚.jpg" data-fancybox="gallery" data-caption="寂寞的夜晚">
-                        <img src="./image/寂寞的夜晚.jpg" alt="lonesome night" class="img-fluid">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/夜间飞行.jpg" data-fancybox="gallery" data-caption="夜间飞行">
-                        <img src="./image/夜间飞行.jpg" alt="fly at night" class="img-fluid">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/夜间飞行2.jpg" data-fancybox="gallery" data-caption="夜间飞行2">
-                        <img src="./image/夜间飞行2.jpg" alt="fly in night 2" class="img-fluid">
-                    </a>
-                </div>
-
-                <!-- Japanese Painting again -->
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/湿り.jpg" data-fancybox="gallery" data-caption="湿り">
-                        <img src="./image/湿り.jpg" alt="tree" class="img-fluid">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/蹌踉.jpg" data-fancybox="gallery" data-caption="蹌踉">
-                        <img src="./image/蹌踉.jpg" alt="yume" class="img-fluid">
-                    </a>
-                </div>
-                <div class="col-sm-6 col-lg-4">
-                    <a href="./image/ゆらゆら.jpg" data-fancybox="gallery" data-caption="ゆらゆら">
-                        <img src="./image/ゆらゆら.jpg" alt="primitive" class="img-fluid">
-                    </a>
-                </div>
+            <div class="row g-4" id="gallery-content">
             </div>
         </section>
-    </main>
-
+    </main>           
+              
     <!-- ===== Footer ===== -->
     <footer class="footer container-fluid text-center py-4 mt-4">
         <div class="footer-sns row justify-content-center">
@@ -195,7 +146,9 @@
             },
         });
     </script>
-
+    
+    <!-- Gellery JS -->
+    <script src="./JS/gallery.js"></script>
 </body>
 
 </html>
