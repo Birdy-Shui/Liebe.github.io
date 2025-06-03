@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { src: "image/ゆらゆら.jpg", alt: "ゆらゆら", caption: "ゆらゆら" },
         { src: "image/夢を覆す.jpg", alt: "夢を覆す", caption: "夢を覆す" },
         { src: "image/gulang.jpg", alt:"Voice of Gulang",caption:"Voice of Gulang"},
-        { src: "image/awa.jpg", alt: "awa", caption: "泡影" }
+        { src: "image/awa.jpg", alt: "awa", caption: "あわ" }
       ],
       water_color: [
         { src: "image/寂寞的夜晚.jpg", alt: "寂しい夜", caption: "寂しい夜" },
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { src: "image/ゆらゆら.jpg", alt: "ゆらゆら", caption: "ゆらゆら" },
         { src: "image/夢を覆す.jpg", alt: "夢を覆す", caption: "夢を覆す" },
         { src: "image/gulang.jpg", alt:"Voice of Gulang",caption:"Voice of Gulang"},
-        { src: "image/awa.jpg", alt: "awa", caption: "泡影" }
+        { src: "image/awa.jpg", alt: "awa", caption: "あわ" }
     ];
     renderGallery(initialImages);
   
