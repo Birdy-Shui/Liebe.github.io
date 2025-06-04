@@ -34,7 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
         { src:"image/朝の海、廈門Early_Morning_Sea_In_Amoy,2022.jpg", alt:"朝の海",caption:"朝の海"},
         { src:"image/婺源の夕暮れ.jpg", alt:"婺源の夕暮れ",caption:"婺源の夕暮れ"}
       ],
-      something_Else: []
+      something_else: [
+        { src:"image/梨の妖精.jpg", alt:"梨の妖精",caption:"梨の妖精"},
+        { src:"image/xiangsi.png", alt:"相思鳥",caption:"相思鳥"}
+      ]
     };
   
     
