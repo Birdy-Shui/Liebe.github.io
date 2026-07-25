@@ -27,8 +27,10 @@
 }
   
 /* ========= Custom Cursor ========= */
+@media (pointer: fine) {
 * {
     cursor: none !important;
+}
 }
 
 #custom-cursor {
